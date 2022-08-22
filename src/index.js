@@ -23,7 +23,7 @@ function cityEnter(event) {
     let cityCurrent = inputRegion.value;
 	let apiKey = "29eb375fa9dacf6024b7749010f9cfe9";
 	let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityCurrent}&units=metric`;
-    cityElem.innerHTML = `Weather1 in the ${inputRegion.value.split('')[0].toUpperCase()+inputRegion.value.slice(1)}`;
+    cityElem.innerHTML = `Weather in the ${inputRegion.value.split('')[0].toUpperCase()+inputRegion.value.slice(1)}`;
 	axios.get(`${apiUrl}&appid=${apiKey}`)
 		.then(showTemperature);
 
