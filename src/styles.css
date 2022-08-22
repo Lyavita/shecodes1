@@ -1,0 +1,90 @@
+header {
+    vertical-align: baseline;
+}
+
+main{
+    margin: 20px 0;
+}
+
+#input-region {
+    padding: 15px 25px;
+}
+
+#city {
+    margin: 0;
+    font-size: 18px;
+    color: purple;
+    font-weight: 800;
+}
+
+#data-time {
+    font-weight: 700;
+    color: green;
+}
+
+#weather-in-city-now-1 {
+    color: blue;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 800;
+}
+
+#weather-in-city-now-2 {
+    color: blue;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 700;
+}
+
+#weather-future-1 {
+    color: red;
+    font-weight: 700;
+}
+
+#weather-future-2 {
+    color: orange;
+}
+
+#weather-future-3 {
+    color: yellow;
+}
+
+#weather-future-4 {
+    color: rgb(103, 157, 207);
+}
+
+#weather-future-5 {
+    color: rgb(94, 223, 105);
+}
+
+#input-search {
+    margin-top: 15px;
+}
+
+.container {
+    padding: 10px;
+}
+
+.form-input-region {
+    text-align: start;
+}
+
+.icon-user {
+    font-size: 36px;
+    text-align: end;
+    color: grey;
+}
+
+.icon-weather-main {
+    font-size: 86px;
+    text-align: center;
+    color: yellow;
+}
+
+.weather-future {
+    margin: 5px;
+    border: grey solid 3px;
+    text-align: center;
+    font-size: 20px;
+    padding: 80px 0;
+}
