@@ -36,3 +36,22 @@ function cityEnter(event) {
 		tempCurrentElem.innerHTML = `${tempCurrent}°C`
 	}
 }
+
+function switchCF(event) {
+    event.preventDefault();
+     let tempCFvalue = document.getElementById("temp-CF-value");
+    let tempCFunit = document.getElementById("temp-CF-unit");
+    
+    if (tempCFunit.innerHTML === "°C") {
+        tempCFunit.innerHTML = "F";
+        tempCFvalue.innerHTML = `${tempCFvalue.innerHTML * 9/5 + 32}`;
+    } else {
+        tempCFunit.innerHTML = "°C";
+        tempCFvalue.innerHTML = `${(tempCFvalue.innerHTML - 32)/1.8}`;
+    }
+}
+
+switchTempCF.addEventListener("click", switchCF);
+
+
+let switchTempCF = document.getElementById("weather-in-city-now-1");
