@@ -5,8 +5,12 @@ let dataTimeElem = document.getElementById("data-time");
 let cityElem = document.getElementById("city");
 let formRegion = document.getElementById("form-region");
 let inputRegion = document.getElementById("input-region");
+let tempCFunit = document.getElementById("temp-CF-unit");
+let tempCurrentElem = document.querySelector("#temp-CF-value");
+let switchTempCF = document.getElementById("weather-in-city-now-1");
 
 formRegion.addEventListener("submit", cityEnter);
+switchTempCF.addEventListener("click", switchCF);
 
 function checkHoursMinuts(value) {
 	if (value < 10) {
@@ -31,27 +35,21 @@ function cityEnter(event) {
 		console.log(response.data)
 		let tempCurrent = Math.round(response.data.main.temp);
 		console.log(tempCurrent);
-		let tempCurrentElem = document.querySelector("#temp-CF-value");
+		// let tempCurrentElem = document.querySelector("#temp-CF-value");
 		console.log(tempCurrentElem);
-		tempCurrentElem.innerHTML = `${tempCurrent}°C`
+		tempCurrentElem.innerHTML = `${tempCurrent}`
+		tempCFunit.innerHTML = `°C`
 	}
 }
 
 function switchCF(event) {
     event.preventDefault();
-     let tempCFvalue = document.getElementById("temp-CF-value");
-    let tempCFunit = document.getElementById("temp-CF-unit");
-    
+      
     if (tempCFunit.innerHTML === "°C") {
-        tempCFunit.innerHTML = "F";
-        tempCFvalue.innerHTML = `${tempCFvalue.innerHTML * 9/5 + 32}`;
+        tempCFunit.innerHTML = "°F";
+        tempCurrentElem.innerHTML = `${Math.round(tempCurrentElem.innerHTML * 9/5 + 32)}`;
     } else {
         tempCFunit.innerHTML = "°C";
-        tempCFvalue.innerHTML = `${(tempCFvalue.innerHTML - 32)/1.8}`;
+        tempCurrentElem.innerHTML = `${Math.round((tempCurrentElem.innerHTML - 32)/1.8)}`;
     }
 }
-
-switchTempCF.addEventListener("click", switchCF);
-
-
-let switchTempCF = document.getElementById("weather-in-city-now-1");
