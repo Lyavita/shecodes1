@@ -67,6 +67,8 @@ main{
 #input-region {
     padding: 15px 25px;
     border-radius: 5px;
+    font-size: 4pm;
+       min-width: 350px;
 }
 
 #city {
@@ -79,6 +81,8 @@ main{
 #data-time {
     font-weight: 700;
     color: rgb(7, 71, 7);
+    font-size: 2rem;
+    padding: 15px;
 }
 
 #weather-in-city-now-1 {
@@ -123,6 +127,8 @@ main{
 
 #input-search {
     margin-top: 15px;
+    font-size: 4pm;
+    padding: 15px;
     border-radius: 4px;
     background-color: #1f6f86;
 }
